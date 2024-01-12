@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+</head>
+<body>
+<select id="gradebook-option">
+    <option value="GRADEBOOK">Gradebook</option>
+</select>
+<button type="button">Import</button>
+<select id="export-option">
+    <option value="EXPORT">Export</option>
+</select>
+<button type="button">Configure</button>
+<h2>Student Names</h2>
+<form id="text-fields-student">
+    <label for="text-fields-student-name"></label>
+    <input id="text-fields-student-name" placeholder="Search Students"/><br/>
+</form>
+<h2>Assignment Names</h2>
+<form id="text-fields-assignment">
+    <label for="text-fields-assignment-name"></label>
+    <input id="text-fields-assignment-name" placeholder="Search Assignments"/><br/>
+</form>
+<br/>
+<button type="button">Apply Filters</button>
+<table border="1">
+    <thead>
+        <tr align="center">
+            <th>Student Name</th>
+            <th>A1 SETUP <br/> Out of 100</th>
+            <th>A2 HTML <br/> Out of 100</th>
+            <th>A3 CSS <br/> Out of 100</th>
+            <th>A4 BOOTSTRAP <br/> Out of 100</th>
+            <th>A5 JAVASCRIPT <br/> Out of 100</th>
+            <th>A6 REACT <br/> Out of 100</th>
+            <th>A7 REDUX <br/> Out of 100</th>
+            <th>A8 NODE <br/> Out of 100</th>
+            <th>A9 MONGO <br/> Out of 100</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr align="center">
+            <td>Alice Wonderland</td>
+            <td>98</td>
+            <td>89</td>
+            <td>87</td>
+            <td>90</td>
+            <td>89</td>
+            <td>94</td>
+            <td>88</td>
+            <td>87</td>
+            <td>100</td>
+        </tr>
+        <tr align="center">
+            <td>Princess Leia</td>
+            <td>98</td>
+            <td>80</td>
+            <td>87</td>
+            <td>86</td>
+            <td>100</td>
+            <td>94</td>
+<!--            found the center alignment of input text from stack overflow https://stackoverflow.com/a/12114606 -->
+            <td>
+                <input style="text-align:center;" type="text" id="row-2-col-7-grade" value="85" size="1">
+            </td>
+            <td>84</td>
+            <td>92</td>
+        </tr>
+        <tr align="center">
+            <td>Luke SkyWalker</td>
+            <td>
+                <input style="text-align:center;" type="text" id="row-3-col-1-grade" value="99" size="1">
+            </td>
+            <td>88</td>
+            <td>97</td>
+            <td>82</td>
+            <td>96</td>
+            <td>93</td>
+            <td>95</td>
+            <td>100</td>
+            <td>93</td>
+        </tr>
+        <tr align="center">
+            <td>Hans Slolo</td>
+            <td>83</td>
+            <td>99</td>
+            <td>94</td>
+            <td>98</td>
+            <td>86</td>
+            <td>85</td>
+            <td>
+                <input style="text-align:center;" type="text" id="row-4-col-7-grade" value="86" size="1">
+            </td>
+            <td>80</td>
+            <td>84</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
