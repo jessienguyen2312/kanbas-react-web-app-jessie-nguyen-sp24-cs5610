@@ -1,0 +1,22 @@
+.wd-kanbas-dashboard {
+    background-color: yellow;
+}
+
+.wd-kanbas-dashboard .row {
+    background-color: green;
+    margin: 0;
+}
+
+.wd-kanbas-dashboard .col {
+    background-color: blue;
+}
+
+.wd-kanbas-dashboard .card{
+    width: 250px;
+    background-color: purple;
+}
+
+.wd-kanbas-dashboard .card img{
+    width: 250px;
+    height: 150px;
+}
