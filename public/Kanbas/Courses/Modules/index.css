@@ -10,13 +10,13 @@
 }
 .wd-modules > li {
     background-color: lightgray;
-    border: 1px solid gray !important;
+    border: 1px solid #c7cdd1 !important;
     border-left: none !important;
     font-weight: bold;
 }
 .wd-modules > li > div {
     padding: 6px;
-    border-left: 1px solid gray !important;
+    border-left: 1px solid #c7cdd1 !important;
 
 }
 .wd-modules > li > ul > li {
@@ -28,23 +28,37 @@
     margin-bottom: 20px;
 }
 
-.wd-modules a {
+a {
     text-decoration: none;
-    color: darkred;
+    color: #a3242b;
     font-weight: normal;
 }
 
-.wd-modules a:hover {
+a:hover {
     text-decoration: underline;
-    text-decoration-color: darkred;
+    text-decoration-color: #a3242b;
 }
 
 .button {
     margin: 2px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-width: thin;
-    border-color: #c7cdd1;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #c7cdd1;
     background-color: #f5f5f5;
+    border-radius: 3px;
+    color: black;
+}
+
+.toggle-class-bar {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button {
+    border: none;
+    background-color: white;
+    color: #a9514e;
 }
 
