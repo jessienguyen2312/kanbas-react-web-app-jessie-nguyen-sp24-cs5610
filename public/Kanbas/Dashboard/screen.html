@@ -5,7 +5,7 @@
     <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
-    <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
     <title>Title</title>
 </head>
@@ -14,7 +14,7 @@
     <tbody >
     <tr>
         <td>
-            <ul class = "wd-kanbas-navigation">
+            <ul class = "wd-kanbas-navigation d-none d-sm-block">
                 <li><a href="/Kanbas/Dashboard/screen.html">
                     <img src="/Kanbas/NEU_Kanbas_logo.png" alt="NEU">
                 </a></li>
@@ -72,115 +72,148 @@
                         Help
                     </a>
                 </li>
-    
+            
             </ul>
         </td>
         <td>
-            <div class="p-1 wd-kanbas-dashboard">
-                <h1>Dashboard</h1> <hr />
-                <h2>Published Courses (7)</h2> <hr />
-                <div class="row">
-                    <div class="row row-cols-1 row-cols-md-5 g-4">
-                        <div class="col">
-                            <div class="card">
+            <div class="wd-kanbas-dashboard">
+                <h1>Dashboard</h1>
+                <hr/>
+                <div>
+                    <h2>Published Courses (7)</h2>
+                    <hr/>
+                    <div class="d-flex flex-wrap">
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/reactjs.jpg" alt="reactjs">
+                            </a>
+                            <div class="card-body">
                                 <a href="/Kanbas/Courses/Home/screen.html">
-                                    <img src="/images/reactjs.jpg" class="card-img-top"
-                                         alt="reactjs"/>
-                                </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="/Kanbas/Courses/Home/screen.html"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        CS5610 Web Development</a>
+                                    <h5 class="card-title">CS5610 36915 Web Development SEC 07 Spring 2024 [BOS-2-TR]</h5>
                                     <p class="card-text">CS5610.36915.202430</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="/images/eat.jpg" class="card-img-top"
-                                         alt="eat"/>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
                                 </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="#"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        LI1001 Eat</a>
-                                    <p class="card-text">LI1001.12345.202410</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="/images/nap.jpg" class="card-img-top"
-                                         alt="nap"/>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
                                 </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="#"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        LI1002 Nap</a>
-                                    <p class="card-text">LI1002.12345.202410</p>
-                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="/images/sleep.jpg" class="card-img-top"
-                                         alt="sleep"/>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/eat.jpg" alt="eat">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1001 36915 Eat SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1001.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
                                 </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="#"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        LI1003 Sleep</a>
-                                    <p class="card-text">LI1003.12345.202410</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="/images/relax.jpg" class="card-img-top"
-                                         alt="relax"/>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
                                 </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="#"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        LI1004 Relax</a>
-                                    <p class="card-text">LI1004.12345.202410</p>
-                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="/images/yoga.jpg" class="card-img-top"
-                                         alt="yoga"/>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/nap.jpg" alt="nap">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1002 36915 Nap SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1002.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
                                 </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="#"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        LI1005 Yoga</a>
-                                    <p class="card-text">LI1005.12345.202410</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <a href="#">
-                                    <img src="/images/touchgrass.jpg" class="card-img-top"
-                                         alt="touch grass"/>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
                                 </a>
-                                <div class="card-body">
-                                    <a class="card-title" href="#"
-                                       style="text-decoration: none; color: navy; font-weight: bold">
-                                        LI1006 Touch Grass</a>
-                                    <p class="card-text">LI1006.12345.202410</p>
-                                </div>
                             </div>
                         </div>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/relax.jpg" alt="relax">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1003 36915 Relax SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1003.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
+                                </a>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/sleep.jpg" alt="sleep">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1004 36915 Sleep SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1004.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
+                                </a>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/starship.jpg" alt="starship">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1005 36915 Starship SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1005.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
+                                </a>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/yoga.jpg" alt="yoga">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1006 36915 Yoga SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1006.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
+                                </a>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <img class="card-img-top" src="/images/touchgrass.jpg" alt="touchgrass">
+                            </a>
+                            <div class="card-body">
+                                <a href="/Kanbas/Courses/Home/screen.html">
+                                    <h5 class="card-title">LI1007 36915 Touch Grass SEC 07 Spring 2024 [BOS-2-TR]</h5>
+                                    <p class="card-text">LI1007.36915.202430</p>
+                                    <p class="card-text">202430_2 Spring 2024 Semester Full Term Grad</p>
+                                </a>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                    
                     </div>
                 </div>
+            
             </div>
         </td>
     </tr>
