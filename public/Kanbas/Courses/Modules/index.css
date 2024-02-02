@@ -9,7 +9,7 @@
     margin: 5px;
 }
 .wd-modules > li {
-    background-color: lightgray;
+    background-color: #f5f5f5;
     border: 1px solid #c7cdd1 !important;
     border-left: none !important;
     font-weight: bold;
