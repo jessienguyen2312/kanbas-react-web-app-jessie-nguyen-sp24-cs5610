@@ -1,3 +1,9 @@
+.outer-content {
+    max-height: 100%;
+    margin-left: 90px;
+    margin-right: 60px;
+}
+
 .button-side-bar {
     text-align: left;
 }
@@ -17,6 +23,8 @@
 
 .to-do-bar a {
     font-size: 0.8em;
+    color: #a3242b;
+    font-weight: normal;
 }
 
 .to-do-bar small {
@@ -50,4 +58,9 @@
     border-radius: 0;
     border: 1px solid #c7cdd1;
 }
+
+/*.rounded-circle {*/
+/*    color: white;*/
+/*    font-size: 0.8em;*/
+/*}*/
 
