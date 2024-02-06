@@ -10,16 +10,85 @@
         <link href="/Kanbas/Courses/Modules/index.css" rel="stylesheet"/>
         <link href="/Kanbas/Courses/Assignments/index.css" rel="stylesheet"/>
         <link href="/Kanbas/Courses/Home/index.css" rel="stylesheet"/>
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <!--        <link href="/Kanbas/Courses/Assignments/Edit/index.css" rel="stylesheet"/>-->
         <title>Title</title>
     </head>
     <body>
         
         <div class="d-md-none top-nav-bar-medium-screen">
-            <button type="button">
+            
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#kanbas_navigation" aria-controls="kanbas_navigation">
                 <i class="fa fa-bars"></i>
             </button>
+<!--            Implementation of offcanvas class modeled example provided in bootstrap v5 documentation-->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="kanbas_navigation">
+                <div class="offcanvas-header justify-content-end">
+                    <button type="button" class="fa fa-times" data-bs-dismiss="offcanvas" aria-label="Close"  style="background-color: white; color: black"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/Kanbas/Dashboard/screen.html">
+                            Canvas
+                        </a></li>
+                        <li class="list-group-item">
+                            <a href="/Kanbas/Account/Profile/screen.html">
+                                <i class="fa fa-user-circle-o"></i>
+                                Account
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Kanbas/Dashboard/screen.html">
+                                <i class="fa fa-tachometer"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Kanbas/Courses/Home/screen.html">
+                                <i class="fa fa-book"></i>
+                                Courses
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <i class="fa fa-calendar"></i>
+                                Calendar
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                Inbox
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <i class="fa fa-clock-o"></i>
+                                History
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <i class="fa fa-desktop"></i>
+                                Studio
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <i class="fa fa-arrow-circle-right"></i>
+                                Commons
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <i class="fa fa-question-circle-o"></i>
+                                Help
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
             
             CS4550.12631.202410 <br/> Modules
             
@@ -27,9 +96,85 @@
                 <button type="button">
                     <i class="fa fa-binoculars"></i>
                 </button>
-                <button type="button">
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#course_navigation" aria-expanded="false" aria-controls="course_navigation">
                     <i class="fa fa-chevron-down"></i>
                 </button>
+                <div class="collapse" id="course_navigation">
+                    <ul class="collapsible-course-nav">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-cubes"></i>
+                                <a href="#">Modules</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-plug"></i>
+                                <a href="#">Piazza</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-plug"></i>
+                                <a href="#">Zoom Meetings</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-pencil-square-o"></i>
+                                <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-rocket"></i>
+                                <a href="#">Quizzes</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-text-o"></i>
+                                <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-users"></i>
+                                <a href="#">People</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-plug"></i>
+                                <a href="#">Panopto Video</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-comments-o"></i>
+                                <a href="#">Discussions</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-bullhorn"></i>
+                                <a href="#">Announcements</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-text-o"></i>
+                                <a href="#">Pages</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-folder-o"></i>
+                                <a href="#">Files</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-list-alt"></i>
+                                <a href="#">Rubrics</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-bullseye"></i>
+                                <a href="#">Outcomes</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle-thin"></i>
+                                <a href="#">Collaborations</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-book"></i>
+                                <a href="#">Syllabus</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-cog"></i>
+                                <a href="/Kanbas/Courses/Settings/Detail/screen.html">Settings</a>
+                            </li>
+                        </ul>
+                </div>
             </span>
         </div>
         

@@ -6,6 +6,7 @@
 
 .button-side-bar {
     text-align: left;
+    white-space: nowrap;
 }
 
 .side-bar {
@@ -59,8 +60,9 @@
     border: 1px solid #c7cdd1;
 }
 
-/*.rounded-circle {*/
-/*    color: white;*/
-/*    font-size: 0.8em;*/
-/*}*/
+.button {
+    white-space: nowrap;
+}
+
+
 

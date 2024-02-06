@@ -39,6 +39,7 @@ html, body {
 .button {
     padding-left: 10px;
     padding-right: 10px;
+    white-space: nowrap;
 
 }
 
@@ -75,3 +76,44 @@ html, body {
     align-items: center;
 }
 
+.collapsible-kanbas-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+}
+
+.offcanvas-body ul > li {
+    border: none;
+    justify-content: start;
+    display: flex;
+}
+
+.offcanvas-body ul > li > a {
+    color: #a3242b;
+    font-size: 1.5em;
+}
+
+.collapsible-course-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 70px;
+    left: 0;
+    background-color: white;
+}
+
+.collapsible-course-nav > li {
+    justify-content: start;
+    display: flex;
+}
+
+.collapsible-course-nav > li > i{
+    color: #a3242b;
+    padding-right: 5px;
+}
