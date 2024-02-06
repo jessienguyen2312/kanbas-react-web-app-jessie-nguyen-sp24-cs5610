@@ -17,6 +17,7 @@
     width: 270px;
     overflow: hidden;
     margin: 20px;
+    padding: 0;
 }
 
 .wd-kanbas-dashboard .card-body .card-title {
@@ -54,4 +55,7 @@
     color: grey;
 }
 
+.container-fluid {
+    margin-left: 90px;
+}
 
