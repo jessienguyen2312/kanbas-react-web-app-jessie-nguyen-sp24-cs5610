@@ -1,0 +1,51 @@
+.wd-kanbas-navigation {
+    background-color: black;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.wd-kanbas-navigation li {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.wd-kanbas-navigation li.wd-active {
+    background-color: white;
+}
+
+.wd-kanbas-navigation li.wd-active a {
+    color: #ee2737;
+}
+
+.wd-kanbas-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.wd-kanbas-navigation .fs-2 {
+    color: #ee2737;
+    font-size: 2em;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.wd-kanbas-navigation .wd-user {
+    color: white;
+}
+
+.wd-kanbas-navigation .wd-active .wd-user {
+    color: #ee2737;
+}
+
+.wd-kanbas-navigation img {
+    height: 65px;
+    background-color: black;
+}

@@ -1,12 +1,14 @@
-import {Link} from "react-router-dom";
-import Nav from "../Nav";
-function Kanbas() {
-    return(
-        <div>
-            <Nav/>
-            <h1>Kanbas</h1>
-        </div>
-    )
+import KanbasNavigation from "./Navigation";
 
-}
-export default Kanbas
+function Kanbas() {
+    return (
+        <div className="d-flex">
+            <KanbasNavigation/>
+            <div className="container" style={{ backgroundColor: "yellow" }}>
+                <h1>Account</h1>
+                <h1>Dashboard</h1>
+                <h1>Courses</h1>
+            </div>
+        </div>
+    );}
+export default Kanbas;
