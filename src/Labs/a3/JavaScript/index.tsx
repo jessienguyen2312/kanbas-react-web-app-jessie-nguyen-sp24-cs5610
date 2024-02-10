@@ -11,6 +11,7 @@ import House from "./json/House";
 import Spreading from "./json/Spreading";
 import Destructing from "./json/Destructing";
 import FunctionDestructing from "./functions/FunctionDestructing";
+import PathParameters from "../routing/PathParameters";
 function JavaScript() {
     console.log('Hello World!');
     return(
