@@ -1,0 +1,12 @@
+[ { "_id": "RS101", "name": "Eat", "number": "RS4550", "startDate": "2023-01-10",
+  "endDate": "2023-05-15", "image": "eat.jpg", "color":  "#403b2a"},
+  { "_id": "RS102", "name": "Sleep", "number": "RS4560", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "sleep.jpg", "color":  "#8e8581"
+  },
+  { "_id": "RS103", "name": "Touch Grass", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "touchgrass.jpg", "color":  "#446337" } ,
+  { "_id": "RS103", "name": "Relax", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "relax.jpg", "color":  "#457395"},
+  { "_id": "RS103", "name": "Nap", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "nap.jpg", "color":  "#2d586f"}
+]
