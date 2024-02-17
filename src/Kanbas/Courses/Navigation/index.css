@@ -1,7 +1,7 @@
-.main {
-    display: flex;
-    flex-direction: row;
-}
+/*.main {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
 
 .wd-navigation {
     background-color: white;
@@ -9,10 +9,13 @@
     padding: 0;
     width: 125px;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 15px;
     height: 100%;
-    /*position: relative;*/
-    /*top: 0;*/
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    max-height: 100vh;
     /*left: 0;*/
 }
 .wd-navigation li {
@@ -23,13 +26,14 @@
     padding-bottom: 8px;
 }
 .wd-navigation li.wd-active {
-    border-left: 2px solid black;
+    border-left: 2px solid #2d3b45;
 }
 .wd-navigation li.wd-active a {
-    color: black;
+    color: #2d3b45;
+    font-weight: bold;
 }
 .wd-navigation a {
-    color: #ee2737;
+    color: #a32424;
     text-decoration: none;
     font-size: 1em;
 }

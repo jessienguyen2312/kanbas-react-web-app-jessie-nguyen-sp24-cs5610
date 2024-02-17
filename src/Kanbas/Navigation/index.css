@@ -21,7 +21,7 @@
 }
 
 .wd-kanbas-navigation li.wd-active a {
-    color: #ee2737;
+    color: #d41b2c;
 }
 
 .wd-kanbas-navigation a {
@@ -30,7 +30,7 @@
 }
 
 .wd-kanbas-navigation .fs-2 {
-    color: #ee2737;
+    color: #d41b2c;
     font-size: 2em;
     margin-bottom: 5px;
     margin-left: 5px;
@@ -42,7 +42,7 @@
 }
 
 .wd-kanbas-navigation .wd-active .wd-user {
-    color: #ee2737;
+    color: #d41b2c;
 }
 
 .wd-kanbas-navigation img {

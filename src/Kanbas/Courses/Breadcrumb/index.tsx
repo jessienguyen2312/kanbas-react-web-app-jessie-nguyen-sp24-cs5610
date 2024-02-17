@@ -49,11 +49,11 @@ function Breadcrumb () {
             <button type={"button"} style={courseNavToggle}>
                 <HiMiniBars3 />
             </button>
-            <Link style={courseNavLink} to="Home">{course?._id}{course?.name}</Link>
+            <Link style={courseNavLink} to="Home">{course?._id}{"."}{course?.code}{"."}{course?.name}</Link>
             <span>
                 {trail.map((link, index) => (
                     <Link style={index === trail.length - 1 ? courseNavCurrent : courseNavLink} to={index === trail.length - 1 ? "#" : link}>
-                        <RxCaretRight style={{color: "#888888"}}/>{link}
+                        <RxCaretRight style={{color: "#888888"}}/>{link.replace("-", " ")}
                     </Link>
                 ))}
             </span>

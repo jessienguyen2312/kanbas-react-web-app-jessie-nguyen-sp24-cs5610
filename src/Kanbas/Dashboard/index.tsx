@@ -38,9 +38,9 @@ function Dashboard() {
 
                                 <div className="card-body">
                                     <Link to={`/Kanbas/Courses/${course._id}/Home`}>
-                                        <h5 className="card-title" style={{color: course.color}}> {course.name}</h5>
-                                        <p className="card-text">{course.number}</p>
-                                        <p className="card-text">{course.startDate}</p>
+                                        <h5 className="card-title" style={{color: course.color}}>{course._id}{" "}{course.code}{" "}{course.name}{" "}{course.label}</h5>
+                                        <p className="card-text">{course._id}{"."}{course.code}{"."}{course.number}</p>
+                                        <p className="card-text">{course.description}</p>
                                     </Link>
                                     <Link to={`/Kanbas/Courses/${course._id}/Assignments`}><BsPencilSquare style={{color: "grey"}}/></Link>
                                 </div>
