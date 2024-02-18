@@ -5,8 +5,8 @@ import { RxCaretRight } from "react-icons/rx";
 import { CSSProperties } from "react";
 // import { useMatches } from "react-router-dom";
 
-// https://www.educative.io/answers/what-are-breadcrumbs-in-react-router
-// https://reactrouter.com/en/main/hooks/use-matches
+// https://www.educative.io/answers/what-are-breadcrumbs-in-react-router <--- loosely based on this tutorial
+// https://reactrouter.com/en/main/hooks/use-matches <-- what I want to implement in the future
 
 
 /*
@@ -45,11 +45,11 @@ function Breadcrumb () {
     console.log(trail);
 
     return (
-        <>
+        <div className="d-none d-md-block justify-content-start">
             <button type={"button"} style={courseNavToggle}>
                 <HiMiniBars3 />
             </button>
-            <Link style={courseNavLink} to="Home">{course?._id}{"."}{course?.code}{"."}{course?.name}</Link>
+            <Link style={courseNavLink} to="Home">{course?._id}{" "}{course?.code}{" "}{course?.name}</Link>
             <span>
                 {trail.map((link, index) => (
                     <Link style={index === trail.length - 1 ? courseNavCurrent : courseNavLink} to={index === trail.length - 1 ? "#" : link}>
@@ -59,7 +59,7 @@ function Breadcrumb () {
             </span>
 
             <hr/>
-        </>
+        </div>
     );
 
 }

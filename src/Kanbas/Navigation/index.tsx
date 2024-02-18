@@ -16,7 +16,7 @@ function KanbasNavigation() {
     ];
     const { pathname } = useLocation();
     return (
-        <ul className="wd-kanbas-navigation d-none d-sm-block">
+        <ul className="wd-kanbas-navigation d-none d-md-block">
             {links.map((link, index) => (
                 <li key={index} className={pathname.includes(link.label) ? "wd-active" : ""}>
                     <Link to={`/Kanbas/${link.label}`}> {link.icon} {link.label} </Link>
