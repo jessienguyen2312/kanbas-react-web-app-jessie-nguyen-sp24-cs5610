@@ -43,7 +43,7 @@ function Status () {
                                 <span className="badge bg-danger bg-primary rounded-circle" style={{marginRight: "5px", fontSize: "0.6em"}}>{content.count}</span>
                                 <div className="flex-grow-1">
                                     <div className="d-flex flex-column">
-                                        <Link to="#">{content.title}</Link>
+                                        <Link to="#" style={{fontWeight: "normal", color: "#be4442", fontSize: "0.8em"}}>{content.title}</Link>
                                         <small style={{color: "#969696"}}>{content.points}{" points • "}{content.due}</small>
                                     </div>
                                 </div>

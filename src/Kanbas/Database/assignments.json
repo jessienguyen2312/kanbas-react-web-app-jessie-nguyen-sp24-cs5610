@@ -1,0 +1,11 @@
+[
+  { "_id": "A101", "title": "Eating Contest", "course": "LI1001", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100"},
+  { "_id": "A102", "title": "Eating Analysis", "course": "LI1001", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100"},
+  { "_id": "A103", "title": "Eating Design Project", "course": "LI1001", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" },
+  { "_id": "A201", "title": "Sleep Aerodynamics Quiz", "course": "LI1002", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" },
+  { "_id": "A202", "title": "Sleep Analysis", "course": "LI1002", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" },
+  { "_id": "A203", "title": "Touch Grass Analysis", "course": "LI1003", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" },
+  { "_id": "A301", "title": "Touch Grass Design Task", "course": "LI1003", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" },
+  { "_id": "A302", "title": "Relax Calculations", "course": "LI1004", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" },
+  { "_id": "A303", "title": "Napping Systems Engineering Exam", "course": "LI1005", "description": "Multiple Modules", "due":  "Sep 18, 2022 at 11:59pm", "points":  "100" }
+]

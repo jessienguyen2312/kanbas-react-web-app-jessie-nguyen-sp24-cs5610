@@ -1,0 +1,119 @@
+.outer-content {
+    max-height: 100%;
+    margin-left: 90px;
+    margin-right: 60px;
+}
+
+.top-nav-bar {
+    margin-top: 30px;
+}
+
+.top-nav-bar-medium-screen {
+    display: flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    color: white;
+    font-size: 0.9em;
+}
+
+.top-nav-bar-medium-screen button {
+    color: white;
+    background-color: black;
+}
+
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+
+.button {
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+
+}
+
+.rounded-pill {
+    color: #4e575e;
+    font-size: 0.8em;
+    border: 1px solid #c7cdd1;
+    padding: 4px;
+}
+
+.list-group i {
+    padding: 5px;
+    margin: 5px;
+}
+
+.list-group a {
+    color: #2d3b45;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.list-group small {
+    color: #4c5860;
+    font-weight: lighter;
+    /*font-size: 0.8em;*/
+}
+
+.assignment-content {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.list-group-item {
+    align-items: center;
+}
+
+.collapsible-kanbas-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+}
+
+.offcanvas-body ul > li {
+    border: none;
+    justify-content: start;
+    display: flex;
+}
+
+.offcanvas-body ul > li > a {
+    color: #a3242b;
+    font-size: 1.5em;
+}
+
+.collapsible-course-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 70px;
+    left: 0;
+    background-color: white;
+}
+
+.collapsible-course-nav > li {
+    justify-content: start;
+    display: flex;
+}
+
+.collapsible-course-nav > li > i{
+    color: #a3242b;
+    padding-right: 5px;
+}

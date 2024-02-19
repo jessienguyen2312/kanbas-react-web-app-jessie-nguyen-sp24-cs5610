@@ -22,7 +22,7 @@
 .wd-modules > li > ul > li {
     padding: 4px;
     border-top: 1px solid #c7cdd1 !important;
-    border-left: 2px solid green;
+    border-left: 4px solid #3c8250;
 }
 .wd-modules > li {
     margin-bottom: 20px;
