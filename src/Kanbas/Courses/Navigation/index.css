@@ -13,8 +13,8 @@
     height: 100%;
     position: sticky;
     top: 0;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
+    /*overflow-y: scroll;*/
+    /*overscroll-behavior-y: contain;*/
     max-height: 100vh;
     /*left: 0;*/
 }
@@ -36,4 +36,31 @@
     color: #a32424;
     text-decoration: none;
     font-size: 1em;
+}
+
+.course-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 70px;
+    right: 0;
+    background-color: white;
+}
+
+.course-nav > li {
+    justify-content: start;
+    display: flex;
+}
+
+.course-nav > li > i{
+    color: #a3242b;
+    padding-right: 5px;
+}
+
+.course-nav-button {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+    background-color: black;
 }

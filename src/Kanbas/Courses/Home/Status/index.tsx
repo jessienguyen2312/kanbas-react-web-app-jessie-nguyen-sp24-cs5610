@@ -9,7 +9,7 @@ import {Link, useParams} from "react-router-dom";
 import { tasks } from "../../../Database";
 function Status () {
     const { courseId } = useParams();
-    console.log(JSON.stringify(courseId))
+    // console.log(JSON.stringify(courseId))
 
     const taskList = tasks.filter((task) => task.course === courseId);
 
@@ -27,7 +27,7 @@ function Status () {
         {label: "View Course Notification", icon: <FaRegBell style={iconStyle}/>},
     ]
     return (
-        <div className="d-flex flex-column" style={{marginRight: "24px"}}>
+        <div className="d-flex flex-column d-none d-lg-flex" style={{marginRight: "24px"}}>
             {sideButtons.map((button, index) =>(
                 <button key={index} className="button button-side-bar">
                     {button.icon}{button.label}

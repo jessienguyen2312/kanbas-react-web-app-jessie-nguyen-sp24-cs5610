@@ -42,7 +42,7 @@ function Breadcrumb () {
     const courseName = currentLocation.indexOf(course?._id);
     // get all elements after the course name to generate breadcrumbs
     const trail = currentLocation.slice(courseName + 1);
-    console.log(trail);
+    // console.log(trail);
 
     return (
         <div className="d-none d-md-block justify-content-start">
