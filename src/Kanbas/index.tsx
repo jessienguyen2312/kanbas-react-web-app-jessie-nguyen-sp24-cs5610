@@ -6,10 +6,6 @@ import Courses from "./Courses";
 function Kanbas() {
     return (
         <>
-            {/*<div>*/}
-            {/*    <KanbasNavigation/>*/}
-            {/*</div>*/}
-
             <>
                 <KanbasNavigation/>
                 <Routes>

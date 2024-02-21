@@ -16,7 +16,7 @@ function Assignments() {
         marginRight: "5px"
     }
     return (
-        <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "30px", marginRight: "30px"}}>
+        <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "10px", marginRight: "30px"}}>
             <div className="d-flex flex-row flex-wrap justify-content-between">
                 <div>
                     <label htmlFor="assignmentSearch">

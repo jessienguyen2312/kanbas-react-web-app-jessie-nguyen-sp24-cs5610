@@ -13,8 +13,8 @@ function ModuleList() {
     const [selectedModule, setSelectedModule] = useState(modulesList[0]);
 
     return (
-        <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "30px", marginRight: "30px"}}>
-            <div className="d-flex justify-content-end">
+        <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "10px", marginRight: "30px"}}>
+            <div className="d-flex flex-wrap justify-content-end">
                 <button className="button">Collapse All</button>
                 <button className="button">View Progress</button>
                 <button className="button">

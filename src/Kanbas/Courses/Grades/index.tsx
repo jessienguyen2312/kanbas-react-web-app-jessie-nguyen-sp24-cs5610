@@ -13,9 +13,9 @@ function Grades() {
     const es = enrollments.filter((enrollment) => enrollment.course === courseId);
     console.log(JSON.stringify(es));
     return (
-        <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "30px", marginRight: "30px"}}>
+        <div className="d-flex flex-column flex-grow-1" style={{marginRight: "30px"}}>
             <div className="d-flex flex-row">
-                <div className="d-flex flex-row flex-grow-1 justify-content-between">
+                <div className="d-flex flex-row flex-grow-1 justify-content-between flex-wrap">
                     <span className="d-flex flex-row" style={{color: "#b04d49"}}>
                         Gradebook
                         <FaCaretDown/>
@@ -37,7 +37,7 @@ function Grades() {
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col col-md-6 col-sm-12">
                     <label htmlFor="student_name" className="form-label" style={{fontWeight: "bold"}}>Student Names</label>
                     <div className="input-group mb-3">
                         <span className="input-group-text"><CiSearch/></span>
@@ -45,7 +45,7 @@ function Grades() {
                         <span className="input-group-text"><RxCaretDown/></span>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col col-md-6 col-sm-12">
                     <label htmlFor="assignment_name" className="form-label" style={{fontWeight: "bold"}}>Assignment Names</label>
                     <div className="input-group mb-3">
                         <span className="input-group-text"><CiSearch/></span>
