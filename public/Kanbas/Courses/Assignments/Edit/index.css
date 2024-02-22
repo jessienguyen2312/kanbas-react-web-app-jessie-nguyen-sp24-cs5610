@@ -1,0 +1,37 @@
+.container {
+    padding: 0;
+    font-size: 0.9em;
+}
+
+.label {
+    /*display: inline-block;*/
+}
+
+.assign-form {
+    /*margin: 10px;*/
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #c7cdd1;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+.container label {
+    padding-left: 0;
+}
+
+.col-3 {
+    display: grid;
+    justify-content: end;
+}
+
+.button-important {
+    color: white;
+    background-color: #a3242b;
+}
+
+

@@ -1,0 +1,30 @@
+th {
+    font-weight: normal;
+    font-size: 0.9em;
+    white-space: nowrap;
+    text-align: center;
+}
+
+td, .table-input {
+    text-align: center;
+}
+
+
+
+.form-control {
+    font-size: 0.9em;
+}
+
+label {
+    font-weight: bold;
+}
+
+td:nth-child(1) {
+    text-align: left;
+    color: #a3242b;
+}
+
+th:nth-child(1) {
+    text-align: left;
+    font-weight: bold;
+}
