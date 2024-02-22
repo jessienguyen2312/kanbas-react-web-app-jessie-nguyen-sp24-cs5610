@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<select id="assignment-options">
+    <option value="SPEEDGRADER">Speed Grader</option>
+</select>
+
+<div style="border-top: 2px solid darkgrey; margin-top: 10px;">
+    <h2>Assignment Name</h2>
+    <label >
+        <input type="text" value="A1 - ENV + HTML" style="margin-bottom: 15px;">
+    </label>
+    <form id="textarea">
+        <label>
+            <textarea cols="30" rows="3">This is the assignment description</textarea>
+        </label>
+    </form>
+    <p style="margin-bottom: 0;">Points</p>
+    <label>
+        <input type="number" value="100">
+    </label>
+    <p style="margin-bottom: 0;">Assignment Group</p>
+    <select id="assignment-group-options">
+        <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+    </select>
+    <p style="margin-bottom: 0;">Display Grade as</p>
+    <select id="grade-display-options">
+        <option value="PERCENTAGE">Percentage</option>
+    </select>
+    <p style="margin-bottom: 0;">Submission Type</p>
+    <select id="submit-options">
+        <option value="ONLINE">Online</option>
+    </select>
+    <p style="margin-bottom: 0;">Online Entry Options</p>
+    <input type="checkbox" value="TEXT_ENTRY" name="submit-option" id="text-entry"><label for="text-entry">Text Entry</label>
+    <br/>
+    <input type="checkbox" value="WEBSITE_URL" name="submit-option" id="website-url"><label for="website-url">Website URL</label>
+    <br/>
+    <input type="checkbox" value="MEDIA_RECORDINGS" name="submit-option" id="media-recordings"><label for="media-recordings">Media Recordings</label>
+    <br/>
+    <input type="checkbox" value="STUDENT_ANNOTATION" name="submit-option" id="student-annotation"><label for="student-annotation">Student Annotation</label>
+    <br/>
+    <input type="checkbox" value="FILE_UPLOADS" name="submit-option" id="file-uploads"><label for="file-uploads">File Uploads</label>
+    <p style="margin-bottom: 0;">Submission Attempts</p>
+    <select id="submission-attempts">
+        <option value="UNLIMITED">Unlimited</option>
+    </select>
+    <p style="margin-bottom: 0;">Plagiarism Review</p>
+    <select id="plagiarism-options">
+        <option value="ENABLED">Enabled</option>
+    </select>
+    <p style="margin-bottom: 0;">Assign</p>
+    <p style="margin-bottom: 0; margin-top: 0;">Assign to</p>
+    <label>
+        <input type="text" value="Everyone">
+    </label>
+    <p style="margin-bottom: 0;">Due</p>
+    <label>
+        <input type="date" value="2021-01-01">
+    </label>
+    <p style="margin-bottom: 0;">Available from</p>
+    <label>
+        <input type="date" value="2021-01-01">
+    </label>
+    <p style="margin-bottom: 0;">Until</p>
+    <label>
+        <input type="date" value="2021-01-01" style="margin-bottom: 15px;">
+    </label>
+    <br/>
+    <button type="button">Cancel</button>
+    <button type="button">Save</button>
+
+</div>
+</body>
+</html>

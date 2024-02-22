@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Screen</title>
+</head>
+<body>
+<form action="/Kanbas/Courses/Assignments/screen.html">
+<table cellpadding="15">
+    <tbody>
+    <tr valign="top">
+        <td>
+            <ul>
+                <li>
+                    <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+                </li>
+                <li>
+                    <a href="#">Calendar</a>
+                </li>
+                <li>
+                    <a href="#">Inbox</a>
+                </li>
+                <li>
+                    <a href="#">History</a>
+                </li>
+                <li>
+                    <a href="#">Studio</a>
+                </li>
+                <li>
+                    <a href="#">Commons</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+    
+            </ul>
+        </td>
+        
+        <td>
+            <ul>
+                <li>
+                    <a href="/Kanbas/Courses/Home/screen.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Modules</a>
+                </li>
+                <li>
+                    <a href="#">Piazza</a>
+                </li>
+                <li>
+                    <a href="#">Zoom Meetings</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+                </li>
+                <li>
+                    <a href="#">Quizzes</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Grades/screen.html">Grades</a>
+                </li>
+                <li>
+                    <a href="#">People</a>
+                </li>
+                <li>
+                    <a href="#">Panopto Video</a>
+                </li>
+                <li>
+                    <a href="#">Discussions</a>
+                </li>
+                <li>
+                    <a href="#">Announcements</a>
+                </li>
+                <li>
+                    <a href="#">Pages</a>
+                </li>
+                <li>
+                    <a href="#">Files</a>
+                </li>
+                <li>
+                    <a href="#">Rubrics</a>
+                </li>
+                <li>
+                    <a href="#">Outcomes</a>
+                </li>
+                <li>
+                    <a href="#">Collaborations</a>
+                </li>
+                <li>
+                    <a href="#">Syllabus</a>
+                </li>
+                <li>
+                    <a href="/Kanbas/Courses/Settings/Detail/screen.html">Settings</a>
+                </li>
+            </ul>
+        </td>
+        
+        <td>
+            <select id="assignment-options">
+                <option value="SPEEDGRADER">Speed Grader</option>
+            </select>
+    
+            <div style="border-top: 2px solid darkgrey; margin-top: 10px;">
+                <h2>Assignment Name</h2>
+                <label >
+                    <input type="text" value="A1 - ENV + HTML" style="margin-bottom: 15px;">
+                </label>
+                <br/>
+                <form id="textarea">
+                    <label>
+                        <textarea cols="30" rows="3">This is the assignment description</textarea>
+                    </label>
+                </form>
+                <p style="margin-bottom: 0;">Points</p>
+                <label>
+                    <input type="number" value="100">
+                </label>
+                <p style="margin-bottom: 0;">Assignment Group</p>
+                <select id="assignment-group-options">
+                    <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+                </select>
+                <p style="margin-bottom: 0;">Display Grade as</p>
+                <select id="grade-display-options">
+                    <option value="PERCENTAGE">Percentage</option>
+                </select>
+                <p style="margin-bottom: 0;">Submission Type</p>
+                <select id="submit-options">
+                    <option value="ONLINE">Online</option>
+                </select>
+                <p style="margin-bottom: 0;">Online Entry Options</p>
+                <input type="checkbox" value="TEXT_ENTRY" name="submit-option" id="text-entry"><label for="text-entry">Text Entry</label>
+                <br/>
+                <input type="checkbox" value="WEBSITE_URL" name="submit-option" id="website-url"><label for="website-url">Website URL</label>
+                <br/>
+                <input type="checkbox" value="MEDIA_RECORDINGS" name="submit-option" id="media-recordings"><label for="media-recordings">Media Recordings</label>
+                <br/>
+                <input type="checkbox" value="STUDENT_ANNOTATION" name="submit-option" id="student-annotation"><label for="student-annotation">Student Annotation</label>
+                <br/>
+                <input type="checkbox" value="FILE_UPLOADS" name="submit-option" id="file-uploads"><label for="file-uploads">File Uploads</label>
+                <p style="margin-bottom: 0;">Submission Attempts</p>
+                <select id="submission-attempts">
+                    <option value="UNLIMITED">Unlimited</option>
+                </select>
+                <p style="margin-bottom: 0;">Plagiarism Review</p>
+                <select id="plagiarism-options">
+                    <option value="ENABLED">Enabled</option>
+                </select>
+                <p style="margin-bottom: 0;">Assign</p>
+                <p style="margin-bottom: 0; margin-top: 0;">Assign to</p>
+                <label>
+                    <input type="text" value="Everyone">
+                </label>
+                <p style="margin-bottom: 0;">Due</p>
+                <label>
+                    <input type="date" value="2021-01-01">
+                </label>
+                <p style="margin-bottom: 0;">Available from</p>
+                <label>
+                    <input type="date" value="2021-01-01">
+                </label>
+                <p style="margin-bottom: 0;">Until</p>
+                <label>
+                    <input type="date" value="2021-01-01" style="margin-bottom: 15px;">
+                </label>
+                <br/>
+                <button type="button" onclick="location.href='/Kanbas/Courses/Assignments/screen.html'">Cancel</button>
+                <button type="submit">Save</button>
+    
+            </div>
+        
+        </td>
+    </tr>
+    </tbody>
+</table>
+</form>
+</body>
+</html>
