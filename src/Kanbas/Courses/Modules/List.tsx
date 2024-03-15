@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
+import db from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaCaretDown, FaRegCheckCircle } from "react-icons/fa";
 import { HiEllipsisVertical } from "react-icons/hi2";
 import { FiPlus } from "react-icons/fi";
@@ -9,6 +9,7 @@ import { useParams } from "react-router";
 
 function ModuleList() {
     const { courseId } = useParams();
+    const [modules, setModules] = useState(db.modules)
     const modulesList = modules.filter((module) => module.course === courseId);
     const [selectedModule, setSelectedModule] = useState(modulesList[0]);
 

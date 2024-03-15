@@ -3,10 +3,11 @@ import "./index.css";
 import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaInbox, FaRegClock, FaChalkboard, FaArrowCircleRight, FaQuestionCircle, FaBars } from "react-icons/fa";
 import { Offcanvas } from "react-bootstrap";
 import {useState} from "react";
-import {courses} from "../Database";
+import db from "../Database";
 
 
 function KanbasNavigation() {
+    const [courses, setCourses] = useState(db.courses);
     const links = [
         { label: " ", icon: <img src={`/images/NEU_Kanbas_logo.png`} alt="neu logo"/> },
         { label: "Account", icon: <FaRegUserCircle className="fs-2 wd-user"/> },

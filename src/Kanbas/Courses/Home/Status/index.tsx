@@ -4,15 +4,14 @@ import { BsBarChartLineFill } from "react-icons/bs";
 import { FaArrowCircleRight, FaRegBell } from "react-icons/fa";
 import { HiOutlineMegaphone } from "react-icons/hi2";
 import "./index.css";
-import {CSSProperties} from "react";
+import {CSSProperties, useState} from "react";
 import {Link, useParams} from "react-router-dom";
-import { tasks } from "../../../Database";
+import db from "../../../Database";
 function Status () {
+    const [tasks, setTasks] = useState(db.tasks);
     const { courseId } = useParams();
     // console.log(JSON.stringify(courseId))
-
     const taskList = tasks.filter((task) => task.course === courseId);
-
 
     const iconStyle : CSSProperties = {
         color: "#626a73", marginLeft: "5px", marginRight: "5px"

@@ -1,7 +1,7 @@
-import { courses } from "../../Kanbas/Database";
+// import { courses } from "../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
-import { CSSProperties } from "react";
+import {CSSProperties, useState} from "react";
 import { Link } from "react-router-dom";
 import CourseNavigation from "./Navigation";
 import Breadcrumb from "./Breadcrumb";
@@ -10,10 +10,15 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Edit";
 import Grades from "./Grades";
+import db from "../Database";
+import {useSelector} from "react-redux";
+import {KanbasState} from "../store";
 
 
 
 function Courses() {
+    // const [courses, setCourses] = useState(db.courses)
+    const {courses} = useSelector((state: KanbasState) => state.coursesReducer);
     const { courseId } = useParams();
     const course = courses.find(
         (course) => course._id === courseId);

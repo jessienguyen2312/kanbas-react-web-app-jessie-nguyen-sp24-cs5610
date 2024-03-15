@@ -1,4 +1,4 @@
-import { assignments, enrollments, grades, users } from "../../Database";
+import db from "../../Database";
 import { useParams } from "react-router-dom";
 import { FaCaretDown, FaFileImport, FaFileExport , FaCog } from "react-icons/fa";
 import { LiaFileImportSolid, LiaFileExportSolid  } from "react-icons/lia";
@@ -6,7 +6,14 @@ import { CiSearch } from "react-icons/ci";
 import { RxCaretDown } from "react-icons/rx";
 import { PiFunnelLight } from "react-icons/pi";
 import "./index.css";
+import {useState} from "react";
 function Grades() {
+    const [assignments, setAssignment] = useState(db.assignments);
+    const [enrollments, setEnrollments] = useState(db.enrollments);
+    const [grades, setGrades] = useState(db.grades);
+    const [users, setUsers] = useState(db.users);
+
+
     const { courseId } = useParams();
     const as = assignments.filter((assignment) => assignment.course === courseId);
     console.log(JSON.stringify(as));

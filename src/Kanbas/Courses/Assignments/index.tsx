@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import {FaCaretDown, FaCheckCircle, FaEllipsisV, FaPlusCircle} from "react-icons/fa";
 import { RiFileEditLine } from "react-icons/ri";
 import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import db from "../../Database";
 import {MdDragIndicator} from "react-icons/md";
 import {FiPlus} from "react-icons/fi";
 import {HiEllipsisVertical} from "react-icons/hi2";
 import "./index.css";
 import {CSSProperties} from "react";
 function Assignments() {
+    const [assignments, setAssignment] = useState(db.assignments)
     const { courseId } = useParams();
     const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
     const buttonStyle: CSSProperties = {

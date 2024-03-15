@@ -1,8 +1,11 @@
-import { courses } from "../../../Kanbas/Database";
+// import { courses } from "../../../Kanbas/Database";
 import { Navigate, Route, Routes, useParams, Link, useLocation } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { RxCaretRight } from "react-icons/rx";
-import { CSSProperties } from "react";
+import {CSSProperties, useState} from "react";
+import db from "../../Database";
+import {useSelector} from "react-redux";
+import {KanbasState} from "../../store";
 // import { useMatches } from "react-router-dom";
 
 // https://www.educative.io/answers/what-are-breadcrumbs-in-react-router <--- loosely based on this tutorial
@@ -16,6 +19,9 @@ import { CSSProperties } from "react";
 * which the link will be disabled, and colored black to denote current page
 * */
 function Breadcrumb () {
+    const {courses} = useSelector((state: KanbasState) => state.coursesReducer);
+    // const [courses, setCourses] = useState(db.courses);
+
     // Stylings
     const courseNavToggle : CSSProperties = {
         border: "none", backgroundColor: "white", color: "#a9514e", fontSize: "30px",

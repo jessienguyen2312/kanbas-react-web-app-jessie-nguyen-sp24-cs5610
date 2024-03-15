@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 function Counter() {
     const [count, setCount] = useState(7);
-    // const addCount = (num: number) => {
-    //     num = num + 1;
-    //     setCount(num);
-    // }
     console.log(count);
     return (
         <div>

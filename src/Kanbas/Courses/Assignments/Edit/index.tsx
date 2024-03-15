@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
+import db from "../../../Database";
+// import { assignments } from "../../../Database";
 import {FaCaretDown, FaCheckCircle, FaEllipsisV, FaPlusCircle} from "react-icons/fa";
 function AssignmentEditor() {
+    const [assignments, setAssignment] = useState(db.assignments)
+
     const { assignmentId } = useParams();
     const assignment = assignments.find(
         (assignment) => assignment._id === assignmentId);
