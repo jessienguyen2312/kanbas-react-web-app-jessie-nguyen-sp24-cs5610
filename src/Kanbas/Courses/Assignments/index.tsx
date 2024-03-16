@@ -8,8 +8,13 @@ import {FiPlus} from "react-icons/fi";
 import {HiEllipsisVertical} from "react-icons/hi2";
 import "./index.css";
 import {CSSProperties} from "react";
+import {useSelector} from "react-redux";
+import {KanbasState} from "../../store";
 function Assignments() {
-    const [assignments, setAssignment] = useState(db.assignments)
+    const assignments = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+
+    // const [assignments, setAssignment] = useState(db.assignments)
     const { courseId } = useParams();
     const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
     const buttonStyle: CSSProperties = {
@@ -31,10 +36,14 @@ function Assignments() {
                         <FiPlus style={buttonStyle}/>
                         Group
                     </button>
-                    <button className="button" style={{backgroundColor: "#c33232", color: "white"}}>
-                        <FiPlus style={{color: "white"}}/>
-                        Assignment
-                    </button>
+
+                    <Link to={`/Kanbas/Courses/${courseId}/Assignments/NewAssignment`}  style={{fontWeight: "bold", color: "#2d3741"}}>
+                        <button className="button" style={{backgroundColor: "#c33232", color: "white"}}>
+                            <FiPlus style={{color: "white"}}/>
+                            Assignment
+                        </button>
+                    </Link>
+
                     <button className="button">
                         <FaEllipsisV style={{color: "82888f"}}/>
                     </button>
