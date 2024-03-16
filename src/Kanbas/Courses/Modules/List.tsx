@@ -6,12 +6,21 @@ import { HiEllipsisVertical } from "react-icons/hi2";
 import { FiPlus } from "react-icons/fi";
 import { MdDragIndicator } from "react-icons/md";
 import { useParams } from "react-router";
+import {useSelector, useDispatch} from "react-redux";
+import {addModule, deleteModule, updateModule, setModule} from "./modulesReducer";
+import {KanbasState} from "../../store";
+import {Link} from "react-router-dom";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const [modules, setModules] = useState(db.modules)
+
+    const modules = useSelector((state: KanbasState) =>
+        state.modulesReducer.modules);
+
+    // const [modules, setModules] = useState(db.modules)
     const modulesList = modules.filter((module) => module.course === courseId);
     const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+
 
     return (
         <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "10px", marginRight: "30px"}}>
@@ -23,10 +32,14 @@ function ModuleList() {
                     Publish All
                     <FaCaretDown style={{margin: "5px"}}/>
                 </button>
-                <button className="button" style={{backgroundColor: "#c33232", color: "white", paddingRight: "14px"}}>
-                    <FiPlus style={{margin: "5px"}}/>
-                    Module
-                </button>
+
+                <Link to={`/Kanbas/Courses/${courseId}/Modules/ModuleEdit`}>
+                    <button className="button" style={{backgroundColor: "#c33232", color: "white", paddingRight: "14px"}}>
+                        <FiPlus style={{margin: "5px"}}/>
+                        Module
+                    </button>
+                </Link>
+
                 <button className="button">
                     <FaEllipsisV />
                 </button>
@@ -36,7 +49,8 @@ function ModuleList() {
                 {modulesList.map((module) => (
                     <li
                         className="list-group-item"
-                        onClick={() => setSelectedModule(module)}>
+                        onClick={() => setSelectedModule(module)}
+                    >
                         <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
                             <MdDragIndicator className="me-2" />
                             <FaCaretDown style={{marginRight: "5px"}}/>
@@ -50,7 +64,7 @@ function ModuleList() {
                         </div>
                         {selectedModule._id === module._id && (
                             <ul className="list-group">
-                                {module.lessons?.map((lesson) => (
+                                {module.lessons?.map((lesson: any) => (
                                     <li className="list-group-item" style={{paddingTop: "20px", paddingBottom: "20px"}}>
                                         <MdDragIndicator className="me-2" />
                                         {lesson.name}

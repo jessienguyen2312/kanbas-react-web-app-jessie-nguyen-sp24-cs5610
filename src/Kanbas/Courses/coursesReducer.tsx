@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import db from "../Database";
-import {create} from "domain";
+
 
 const courses = db.courses;
 
@@ -22,7 +22,7 @@ const initialState = {
 
 // Function to generate random courseId
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-function getRandomInt(min: number, max: number) {
+export function getRandomInt(min: number, max: number) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
     return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);

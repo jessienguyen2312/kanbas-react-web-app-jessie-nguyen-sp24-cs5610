@@ -1,7 +1,11 @@
 import {addCourse, deleteCourse, updateCourse, setCourse} from "../../Courses/coursesReducer";
 import {useSelector, useDispatch} from "react-redux";
 import {KanbasState} from "../../store";
-import {useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import { IoTrashOutline } from "react-icons/io5";
+import { FaEdit } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
+import { RxUpdate } from "react-icons/rx";
 
 function CourseModifier() {
     const { pathname } = useLocation();
@@ -13,46 +17,55 @@ function CourseModifier() {
     return (
         <div className="container" >
             <h1>Modify Courses</h1>
-            <div>
-                <h3>Add a course</h3>
-                <div className="form-control">
-
+            <div className="flex flex-row">
+                <div className="mb-3">
+                    <label className="form-label">Course Name</label>
+                    <input className="form-control" type="text" value={course.name} onChange={(e) => dispatch(setCourse({ ...course, name: e.target.value }))}/>
                 </div>
+                <div className="mb-3">
+                    <label className="form-label">Course Description</label>
+                    <input className="form-control" type="text" value={course.description} onChange={(e) => dispatch(setCourse({ ...course, description: e.target.value }))}/>
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Start Date</label>
+                    <input className="form-control" type="date" value={course.startDate} onChange={(e) => dispatch(setCourse({ ...course, startDate: e.target.value }))}/>
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">End Date</label>
+                    <input className="form-control" type="date" value={course.endDate} onChange={(e) => dispatch(setCourse({ ...course, endDate: e.target.value }))}/>
+                </div>
+                <button className="button float-end" onClick={() => dispatch(addCourse({...course}))} style={{backgroundColor: "#3c8250", color: "white"}}>
+                    <FaPlus style={{marginBottom: "3px", marginTop: 0}}/>
+                    Add
+                </button>
+                <button className="button" onClick={() => dispatch(updateCourse(course))}>
+                    <RxUpdate style={{marginBottom: "3px", marginTop: 0}}/>
+                    Update
+                </button>
             </div>
+            <hr/>
+            <h1>Published Courses ({courseList.length})</h1>
             <ul className="list-group">
-                <li className="list-group-item">
-                    <button className="btn btn-success" onClick={() => dispatch(addCourse({...course}))}>
-                        Add
-                    </button>
-                    <button className="btn btn-warning" onClick={() => dispatch(updateCourse(course))}>
-                        Update
-                    </button>
-                    <div className="mb-3">
-                        <label className="form-label">Course Name</label>
-                        <input className="form-control" type="text" value={course.name} onChange={(e) => dispatch(setCourse({ ...course, name: e.target.value }))}/>
-                    </div>
-                    <div className="mb-3">
-                        <label className="form-label">Course Description</label>
-                        <input className="form-control" type="text" value={course.description} onChange={(e) => dispatch(setCourse({ ...course, description: e.target.value }))}/>
-                    </div>
-                    <div className="mb-3">
-                        <label className="form-label">Start Date</label>
-                        <input className="form-control" type="date" value={course.startDate} onChange={(e) => dispatch(setCourse({ ...course, startDate: e.target.value }))}/>
-                    </div>
-                    <div className="mb-3">
-                        <label className="form-label">End Date</label>
-                        <input className="form-control" type="date" value={course.endDate} onChange={(e) => dispatch(setCourse({ ...course, endDate: e.target.value }))}/>
-                    </div>
-                </li>
                 {courseList.map((course, index) => (
                     <li key={index} className="list-group-item">
-                        <button className="btn btn-danger" onClick={() => dispatch(deleteCourse(course._id))}>Delete</button>
-                        <button className="btn btn-info" onClick={() => dispatch(setCourse(course))}>Edit</button>
-                        <h4>{course.name}</h4>
-                        <p>id: {course._id}</p>
-                        <p>description: {course.description}</p>
-                        <p>start date:{course.startDate}</p>
-                        <p>end date:{course.endDate}</p>
+                        <button className="button float-end" style={{backgroundColor: "#c33232", color: "white"}}  onClick={() => dispatch(deleteCourse(course._id))}>
+                            <IoTrashOutline style={{marginBottom: "3px", marginTop: 0}}/>
+                            Delete
+                        </button>
+
+                        <Link to={`/Kanbas/Courses/${course._id}/Home`} style={{fontSize: "1.5em"}}>
+                            {course.name}
+                        </Link>
+
+                        <button className="button" onClick={() => dispatch(setCourse(course))} style={{marginTop: 0}}>
+                            <FaEdit style={{marginBottom: "3px", marginTop: 0}}/>
+                            Edit
+                        </button>
+
+                        <p><b>id: </b> {course._id}</p>
+                        <p><b>Description: </b> {course.description}</p>
+                        <p><b>Start date: </b> {course.startDate}</p>
+                        <p><b>End date: </b>{course.endDate}</p>
                     </li>
                 ))}
             </ul>

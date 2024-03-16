@@ -13,6 +13,7 @@ import Grades from "./Grades";
 import db from "../Database";
 import {useSelector} from "react-redux";
 import {KanbasState} from "../store";
+import ModuleModifier from "./Modules/ModuleModifier";
 
 
 
@@ -31,6 +32,7 @@ function Courses() {
                     <Route path="/" element={<Navigate to="Home" />} />
                     <Route path="Home" element={<Home/>}/>
                     <Route path="Modules" element={<Modules/>} />
+                    <Route path="Modules/ModuleEdit" element={<ModuleModifier/>} />
                     <Route path="Piazza" element={<h1>Piazza</h1>} />
                     <Route path="Zoom-Meetings" element={<h1>Zoom Meeting</h1>} />
                     <Route path="Assignments" element={<Assignments/>} />

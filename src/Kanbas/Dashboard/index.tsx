@@ -27,20 +27,18 @@ function Dashboard() {
             <div className="row">
                 <div className="col-12 d-none d-sm-block">
                     <h1>Dashboard</h1>
-                    <Link to="/Kanbas/Courses">
-                        <button className="btn btn-primary">Modify courses</button>
-                    </Link>
-
                     <hr/>
                 </div>
                 <div className="col-12 ms-4 d-xs-block">
-                    <h3>Published courses ({courses.length})</h3>
+                    <h3 style={{display: "inline"}}>Published courses ({courses.length})</h3>
+                    <Link to="/Kanbas/Courses">
+                        <button className="button" style={{backgroundColor: "#c33232", color: "white"}}>Modify courses (Add/Edit/Delete)</button>
+                    </Link>
                     <hr/>
                 </div>
             </div>
             <div className="row">
                 <div className="row row-cols-5 row-cols-xs-2 d-xs-block g-4">
-
                     {courses.map((course) => (
                         <div key={course._id} style={{ width: 300 }}>
 
