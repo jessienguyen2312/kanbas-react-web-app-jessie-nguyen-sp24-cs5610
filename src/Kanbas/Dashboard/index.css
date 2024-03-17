@@ -1,0 +1,64 @@
+.wd-kanbas-dashboard{
+    overflow: hidden;
+    margin-left: 90px;
+}
+
+.wd-kanbas-dashboard h1 {
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}
+
+.card-img-top{
+    width: 270px;
+    height: 150px;
+}
+
+.card {
+    width: 270px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 0;
+}
+
+.card-title {
+    color: darkslategrey;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1em
+}
+
+.card-text {
+    text-decoration: none;
+    color: grey;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.8em;
+}
+
+.wd-kanbas-dashboard p {
+    margin-bottom: 0;
+}
+
+.wd-kanbas-dashboard a {
+    text-decoration: none;
+}
+
+.wd-kanbas-dashboard a:hover {
+    text-decoration: underline;
+    text-decoration-color: orangered;
+}
+
+.container {
+    margin-left: 90px;
+}
+
+/*.ellipsis-v{*/
+/*    position: absolute;*/
+/*    right: 10px;*/
+/*    top: 10px;*/
+/*    color: white*/
+/*}*/
+

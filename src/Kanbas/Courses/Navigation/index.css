@@ -1,0 +1,66 @@
+/*.main {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+
+.wd-navigation {
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    width: 125px;
+    margin: 0;
+    margin-left: 15px;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    /*overflow-y: scroll;*/
+    /*overscroll-behavior-y: contain;*/
+    max-height: 100vh;
+    /*left: 0;*/
+}
+.wd-navigation li {
+    padding-left: 4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.wd-navigation li.wd-active {
+    border-left: 2px solid #2d3b45;
+}
+.wd-navigation li.wd-active a {
+    color: #2d3b45;
+    font-weight: bold;
+}
+.wd-navigation a {
+    color: #a32424;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.course-nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 70px;
+    right: 0;
+    background-color: white;
+}
+
+.course-nav > li {
+    justify-content: start;
+    display: flex;
+}
+
+.course-nav > li > i{
+    color: #a3242b;
+    padding-right: 5px;
+}
+
+.course-nav-button {
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+}

@@ -1,0 +1,71 @@
+.outer-content {
+    max-height: 100%;
+    margin-left: 90px;
+    margin-right: 60px;
+}
+
+.button-side-bar {
+    text-align: left;
+    white-space: nowrap;
+}
+
+.side-bar {
+    margin: 20px;
+}
+
+.action-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.to-do-bar .list-group-item {
+    border: none;
+}
+
+.to-do-bar a {
+    font-size: 0.8em;
+    color: #be4442;
+    font-weight: normal;
+}
+
+.to-do-bar small {
+    font-size: 0.7em;
+}
+
+.coming-up-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.to-do-bar hr {
+    margin: 0;
+}
+
+.to-do-bar br {
+    margin: 0;
+}
+
+.to-do-bar i {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+    color: #757c82;
+}
+
+.btn-outline-secondary {
+    border-radius: 0;
+    border: 1px solid #c7cdd1;
+}
+
+.button {
+    white-space: nowrap;
+}
+
+/*button {*/
+/*    color: #6c767d;*/
+/*}*/
+
+
