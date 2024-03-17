@@ -14,7 +14,7 @@ function ModuleModifier() {
     state.modulesReducer.modules);
     const module = useSelector((state:KanbasState) =>
     state.modulesReducer.module);
-    console.log(JSON.stringify(module))
+    // console.log(JSON.stringify(module))
 
     const dispatch = useDispatch();
 
@@ -57,7 +57,7 @@ function ModuleModifier() {
                         <p><b>Module Id: </b>{module._id}</p>
                         <p><b>Module Name: </b> {module.name}</p>
                         <p><b>Module Description: </b> {module.description}</p>
-                        <p>{JSON.stringify(module)}</p>
+                        {/*<p>{JSON.stringify(module)}</p>*/}
 
                     </li>
                 ))}

@@ -5,7 +5,12 @@ import db from "../../../Database";
 import {FaCaretDown, FaCheckCircle, FaEllipsisV, FaPlusCircle} from "react-icons/fa";
 import {useDispatch, useSelector} from "react-redux";
 import {KanbasState} from "../../../store";
-import {addAssignment, setAssignment, updateAssignment} from "../assignmentsReducer";
+import {
+    addAssignment,
+    resetAssignment,
+    setAssignment,
+    updateAssignment
+} from "../assignmentsReducer";
 function AssignmentEditor() {
     const { assignmentId } = useParams();
     const { courseId } = useParams();
@@ -35,13 +40,17 @@ function AssignmentEditor() {
     const handleSave = () => {
         if (assignmentId !== "NewAssignment") {
             dispatch(updateAssignment(assignment));
+            dispatch(resetAssignment(assignment));
             navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+
         } else {
             dispatch(addAssignment({...assignment, course: courseId}))
+            dispatch(resetAssignment(assignment));
             navigate(`/Kanbas/Courses/${courseId}/Assignments`);
         }
     };
     const handleCancel = () => {
+        dispatch(resetAssignment(assignment));
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     }
     return (

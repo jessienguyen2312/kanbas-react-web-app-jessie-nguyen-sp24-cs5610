@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import Modal from 'react-bootstrap/Modal';
 import {FaCaretDown, FaCheckCircle, FaEllipsisV, FaPlusCircle} from "react-icons/fa";
 import { RiFileEditLine } from "react-icons/ri";
 import { Link, useParams } from "react-router-dom";
-import db from "../../Database";
 import {MdDragIndicator} from "react-icons/md";
 import {FiPlus} from "react-icons/fi";
 import {HiEllipsisVertical} from "react-icons/hi2";
@@ -10,8 +10,12 @@ import "./index.css";
 import {CSSProperties} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {KanbasState} from "../../store";
-import {setAssignment} from "./assignmentsReducer";
-import JsonStringify from "../../../Labs/a3/JavaScript/json/JsonStringify";
+import {deleteAssignment, setAssignment} from "./assignmentsReducer";
+import {IoTrashOutline} from "react-icons/io5";
+import {Button} from "react-bootstrap";
+
+
+
 function Assignments() {
     const assignments = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
@@ -27,6 +31,16 @@ function Assignments() {
         marginLeft: "0px",
         marginRight: "5px"
     }
+
+    const [show, setShow] = useState(false);
+    const [id, setId] = useState();
+
+    const showDialog = () => {
+        setShow(true);
+    }
+    const closeDialog = () => setShow(false);
+
+
     return (
         <div className="d-flex flex-column flex-grow-1" style={{marginLeft: "10px", marginRight: "30px"}}>
             <div className="d-flex flex-row flex-wrap justify-content-between">
@@ -84,6 +98,25 @@ function Assignments() {
                                     <br/>
                                     <small><span  style={{fontWeight: "normal", color: "#b04c47"}}>{assignment.description}</span>{" | "}<b>Due </b>{assignment.due}{" | "}{assignment.points}{" pts"}</small>
                                 </div>
+                                <span className="float-end" onClick={() => {showDialog(); setId(assignment._id)}}>
+                                    <IoTrashOutline className="me-2" style={{fontSize: "1em"}}/>
+                                </span>
+                                <Modal show={show} onHide={closeDialog}>
+                                    <Modal.Body>
+                                        Delete?
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={closeDialog}>
+                                            Cancel
+                                        </Button>
+                                        <Button variant="secondary" onClick={() => {
+                                            dispatch(deleteAssignment(id));
+                                            closeDialog()
+                                        }}>
+                                            Yes
+                                        </Button>
+                                    </Modal.Footer>
+                                </Modal>
                                 <span className="float-end">
                                     <FaCheckCircle className="text-success" />
                                 </span>
