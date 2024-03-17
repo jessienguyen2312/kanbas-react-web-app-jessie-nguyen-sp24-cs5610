@@ -8,15 +8,21 @@ import {FiPlus} from "react-icons/fi";
 import {HiEllipsisVertical} from "react-icons/hi2";
 import "./index.css";
 import {CSSProperties} from "react";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {KanbasState} from "../../store";
+import {setAssignment} from "./assignmentsReducer";
+import JsonStringify from "../../../Labs/a3/JavaScript/json/JsonStringify";
 function Assignments() {
     const assignments = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
+    const dispatch = useDispatch();
 
     // const [assignments, setAssignment] = useState(db.assignments)
     const { courseId } = useParams();
     const assignmentList = assignments.filter((assignment) => assignment.course === courseId);
+
+    console.log(JSON.stringify(assignmentList))
+
     const buttonStyle: CSSProperties = {
         marginLeft: "0px",
         marginRight: "5px"
@@ -71,7 +77,10 @@ function Assignments() {
                                 <MdDragIndicator className="me-2" />
                                 <RiFileEditLine style={{marginRight: "18px", fontSize: "1.2em", color: "#73a682"}}/>
                                 <div className="flex-grow-1 assignment-content">
-                                    <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}  style={{fontWeight: "bold", color: "#2d3741"}}>{assignment.title}</Link>
+                                    <Link to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}  style={{fontWeight: "bold", color: "#2d3741"}}
+                                        onClick={() => dispatch(setAssignment(assignment))}>
+                                        {assignment.title}
+                                    </Link>
                                     <br/>
                                     <small><span  style={{fontWeight: "normal", color: "#b04c47"}}>{assignment.description}</span>{" | "}<b>Due </b>{assignment.due}{" | "}{assignment.points}{" pts"}</small>
                                 </div>

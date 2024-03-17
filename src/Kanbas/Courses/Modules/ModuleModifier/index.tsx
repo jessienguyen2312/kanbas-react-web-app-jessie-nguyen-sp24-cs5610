@@ -14,6 +14,8 @@ function ModuleModifier() {
     state.modulesReducer.modules);
     const module = useSelector((state:KanbasState) =>
     state.modulesReducer.module);
+    console.log(JSON.stringify(module))
+
     const dispatch = useDispatch();
 
     return(

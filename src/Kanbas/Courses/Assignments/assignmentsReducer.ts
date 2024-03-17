@@ -11,9 +11,9 @@ const initialState = {
         title: "New Assignment",
         description: "New Description",
         points: 100,
-        due: new Date(),
-        available: new Date(),
-        until: new Date()
+        due: new Date().toISOString().slice(0, 16),
+        available: new Date().toISOString().slice(0, 16),
+        until: new Date().toISOString().slice(0, 16)
     },
 };
 
