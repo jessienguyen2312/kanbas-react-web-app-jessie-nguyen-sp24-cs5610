@@ -34,6 +34,7 @@ function Assignments() {
 
     const [show, setShow] = useState(false);
     const [id, setId] = useState();
+    const [title, setTitle] = useState();
 
     const showDialog = () => {
         setShow(true);
@@ -98,23 +99,25 @@ function Assignments() {
                                     <br/>
                                     <small><span  style={{fontWeight: "normal", color: "#b04c47"}}>{assignment.description}</span>{" | "}<b>Due </b>{assignment.due}{" | "}{assignment.points}{" pts"}</small>
                                 </div>
-                                <span className="float-end" onClick={() => {showDialog(); setId(assignment._id)}}>
+                                <span className="float-end" onClick={() => {showDialog(); setId(assignment._id); setTitle(assignment.title)}}>
                                     <IoTrashOutline className="me-2" style={{fontSize: "1em"}}/>
                                 </span>
                                 <Modal show={show} onHide={closeDialog}>
                                     <Modal.Body>
-                                        Delete?
+                                        Delete {title}?
                                     </Modal.Body>
                                     <Modal.Footer>
-                                        <Button variant="secondary" onClick={closeDialog}>
+                                        <button className="button"
+                                            onClick={closeDialog}>
                                             Cancel
-                                        </Button>
-                                        <Button variant="secondary" onClick={() => {
+                                        </button>
+                                        <button className="button" style={{backgroundColor: "#c33232", color: "white"}}
+                                            onClick={() => {
                                             dispatch(deleteAssignment(id));
                                             closeDialog()
                                         }}>
                                             Yes
-                                        </Button>
+                                        </button>
                                     </Modal.Footer>
                                 </Modal>
                                 <span className="float-end">
