@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
+interface todos {
+    id: number;
+    title: string;
+    description: string;
+    due: string;
+    completed: boolean;
+}
+
+
 function WorkingWithArrays() {
     const [todo, setTodo] = useState({
         id: 1,
@@ -10,9 +20,39 @@ function WorkingWithArrays() {
     });
     const API = "http://localhost:4000/a5/todos";
 
+    const [todos, setTodos] = useState<todos[]>([]);
+    const [errorMessage, setErrorMessage] = useState(null);
+
+    const postTodo = async () => {
+        const response = await axios.post(API, todos);
+
+        setTodos([...todos, response.data]);
+    };
+
+    const deleteTodo = async (todo: any) => {
+        try {
+            const response = await axios.delete(`${API}/${todo.id}`);
+
+            setTodos(todos.filter((t) => t.id !== todo.id));
+        } catch (error: any){
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+
+    };
+
+    const updateTodo = async () => {
+        try {
+            const response = await axios.put(`${API}/${todo.id}`, todo);
+            setTodos(todos.map((t) => (t.id === todo.id ? todo : t)));
+        } catch (error: any) {
+            console.log(error);
+            setErrorMessage(error.response.data.message);
+        }
+
+    };
 
 
-    const [todos, setTodos] = useState([]);
     const fetchTodos = async () => {
         const response = await axios.get(API);
         setTodos(response.data);
@@ -57,6 +97,22 @@ function WorkingWithArrays() {
                 <br/>
                 <label className="label">Todo Title</label>
                 <input value={todo.title} onChange={(e) => setTodo({ ...todo, title: e.target.value })}/>
+                <br/>
+                <label className="label">Todo Description</label>
+                <textarea value={todo.description} onChange={(e) => setTodo({ ...todo, description: e.target.value })} />
+                <br/>
+                <label className="label">Todo Date</label>
+                <input value={todo.due} type="date" onChange={(e) => setTodo({ ...todo, due: e.target.value })} />
+                <br/>
+                <label>
+                    <input checked={todo.completed} type="checkbox" onChange={(e) => setTodo({ ...todo, completed: e.target.checked })} />
+                    Completed
+                </label>
+                <br/>
+                <button className="btn btn-info" onClick={postTodo}> Post Todo </button>
+                <button className="btn btn-info" onClick={updateTodo}>Update Todo </button>
+
+
 
                 <br/>
                 <button className="btn btn-primary" onClick={createTodo}>
@@ -67,11 +123,26 @@ function WorkingWithArrays() {
                     Update Title
                 </button>
 
+                <br/>
+                {errorMessage && (
+                    <div className="alert alert-danger mb-2 mt-2">
+                        {errorMessage}
+                    </div>
+                )}
+
+
 
                 <ul className="list-group">
                     {todos.map((todo: any) => (
                         <li key={todo.id} className="list-group-item">
+                            <input checked={todo.completed}
+                                   type="checkbox" readOnly />
                             {todo.title}
+                            <p>{todo.description}</p>
+                            <p>{todo.due}</p>
+                            <button className="btn btn-danger float-end" onClick={() => deleteTodo(todo)} >
+                                Delete
+                            </button>
                             <button className="btn btn-danger float-end" onClick={() => removeTodo(todo)} >
                                 Remove
                             </button>
